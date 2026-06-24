@@ -218,9 +218,3 @@ def summarize_old_history(messages, model_name="gpt-4o"):
     return model.invoke(summary_prompt).content
 
 ```
-## 7. Best Practices & Error Handling
-
-1. **Always include a SystemMessage** at the start to lock down model behavioral guardrails.
-2. **Preserve chronological order** to maintain logical execution flow across steps.
-3. **Proactively use native message tools** (`trim_messages`, `merge_messages`) to maximize performance.
-4. **Safeguard invocation pipelines** using explicit error parsing layers:
